@@ -14,7 +14,6 @@ const Login: React.FC = () => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const [loginError, setLoginError] = useState<string | null>(null);
-  
   const {
     register,
     handleSubmit,
