@@ -17,6 +17,7 @@ interface CheckoutFormInputs {
   cardCVC?: string;
   tip: string;
   specialInstructions?: string;
+  
 }
 
 
