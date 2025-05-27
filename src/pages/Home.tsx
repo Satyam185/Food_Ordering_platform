@@ -12,7 +12,6 @@ const Home: React.FC = () => {
   const topRestaurants = [...mockRestaurants]
     .sort((a, b) => b.rating - a.rating)
     .slice(0, 4);
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     navigate('/restaurants', { state: { searchQuery } });
