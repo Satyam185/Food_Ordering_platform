@@ -13,7 +13,6 @@ interface AddToCartModalProps {
     specialInstructions?: string
   ) => void;
 }
-
 const AddToCartModal: React.FC<AddToCartModalProps> = ({
   item,
   onClose,
