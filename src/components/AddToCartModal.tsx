@@ -35,35 +35,6 @@ const AddToCartModal: React.FC<AddToCartModalProps> = ({
     setTotalPrice(basePrice * quantity);
   }, [item.price, quantity, selectedOptions]);
 
-  const handleOptionChange = (
-    optionName: string, 
-    choice: { id: string; name: string; price: number },
-    multiple: boolean
-  ) => {
-    setSelectedOptions((prev) => {
-      // If multiple selections are not allowed, remove previous selection for this option
-      if (!multiple) {
-        const filtered = prev.filter((opt) => opt.name !== optionName);
-        return [...filtered, { name: optionName, choice }];
-      }
-      
-      // For multiple selections, toggle the selection
-      const existingSelection = prev.find(
-        (opt) => opt.name === optionName && opt.choice.id === choice.id
-      );
-      
-      if (existingSelection) {
-        // Remove if already selected
-        return prev.filter(
-          (opt) => !(opt.name === optionName && opt.choice.id === choice.id)
-        );
-      } else {
-        // Add new selection
-        return [...prev, { name: optionName, choice }];
-      }
-    });
-  };
-
   const isOptionSelected = (optionName: string, choiceId: string): boolean => {
     return selectedOptions.some(
       (opt) => opt.name === optionName && opt.choice.id === choiceId
