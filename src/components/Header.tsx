@@ -140,23 +140,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* Mobile menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg py-4 px-4 animate-slide-up">
-          <div className="flex flex-col space-y-4">
-            <div className="relative mb-2">
-              <input
-                type="text"
-                placeholder="Search restaurants or dishes..."
-                className="pl-9 pr-4 py-2 rounded-full border border-gray-300 focus:border-primary-500 focus:ring-1 focus:ring-primary-500 focus:outline-none w-full"
-              />
-              <Search className="absolute left-3 top-2.5 text-gray-400" size={18} />
-            </div>
-            <Link
-              to="/"
-              className="py-2 text-gray-700 hover:text-primary-600 border-b border-gray-100"
-            >
-              Home
-            </Link>
+   
             <Link
               to="/restaurants"
               className="py-2 text-gray-700 hover:text-primary-600 border-b border-gray-100"
